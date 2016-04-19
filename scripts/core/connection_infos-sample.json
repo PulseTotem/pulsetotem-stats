@@ -1,3 +1,7 @@
 {
-    "uri": "mongodb://[username:password@]host1[:port1]"
+    "host": "localhost",
+    "port": 27027,
+    "database": "pulsetotem-stats",
+    "login": "",
+    "password": ""
 }
