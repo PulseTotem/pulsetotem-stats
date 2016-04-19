@@ -3,6 +3,7 @@
  */
 
 /// <reference path="../core/DatabaseConnection.ts" />
+/// <reference path="../../t6s-core/core-backend/scripts/server/RouterItf.ts" />
 
 class CRUDRouter extends RouterItf {
 

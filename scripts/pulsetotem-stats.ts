@@ -9,7 +9,7 @@
 
 class PulseTotemStats extends Server {
 
-    constructor(listeningPort : number, arguments : Array<String>) {
+    constructor(listeningPort : number, arguments : Array<string>) {
         super(listeningPort, arguments);
 
         this.init();
