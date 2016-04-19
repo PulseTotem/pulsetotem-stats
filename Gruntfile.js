@@ -82,6 +82,9 @@ module.exports = function (grunt) {
             buildPackageReinit: {
                 files: 	[{'package.json': 'package-bak.json'}]
             },
+            keepPackage: {
+                files: 	[{'build/package.json': 'package.json'}]
+            },
             distPackage: {
               files: 	[{'dist/package.json': 'package.json'}]
             }
@@ -222,7 +225,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', function () {
         grunt.task.run(['clean:package', 'clean:build']);
 
-        grunt.task.run(['env:build','update_json:packageBuild', 'copy:buildPackageBak', 'copy:buildPackageReplace', 'npm-install', 'copy:buildPackageReinit', 'copy:buildConnectionInfosFile', 'typescript:build', 'clean:package']);
+        grunt.task.run(['env:build','update_json:packageBuild', 'copy:buildPackageBak', 'copy:buildPackageReplace', 'npm-install', 'copy:keepPackage', 'copy:buildPackageReinit', 'copy:buildConnectionInfosFile', 'typescript:build', 'clean:package']);
     });
 
     grunt.registerTask('develop', ['build', 'express:build', 'watch']);
