@@ -37,7 +37,7 @@ class CRUDRouter extends RouterItf {
                     res.status(500).send({'error': 'Error while inserting data in collection '+collection});
                 } else {
                     Logger.debug("Inserting data "+result._id+" in collection "+collection);
-                    res.status(200).send("Stat recorded");
+                    res.status(200).send({"success":"Stat recorded"});
                 }
             });
         }
